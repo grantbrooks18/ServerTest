@@ -2,18 +2,36 @@
 <html>
 
 <head>
-  <title>Our Company</title>
+  <title>WorkoutMate</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>Welcome to Our Company</h1>
-  <h2>Web Site Main Ingredients:</h2>
+  <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('History', this, 'blue')">History</button>
+  <button class="tablink" onclick="openPage('Admin', this, 'orange')">Admin</button>
 
-  <p>Pages (HTML)</p>
-  <p>Style Sheets (CSS)</p>
-  <p>Computer Code (JavaScript)</p>
-  <p>Live Data (Files and Databases)</p>
+  <div id="Home" class="tabcontent">
+    <h3>Home</h3>
+    <p>Welcome to WorkoutMate!</p>
+
+  </div>
+
+
+  <div id="History" class="tabcontent">
+    <h3>History</h3>
+    <p>Browse your past workouts, and see your progress!</p>
+  </div>
+
+  <div id="Admin" class="tabcontent">
+    <h3>Admin</h3>
+    <p>Handle the nuts and bolts of the site.</p>
+    <button>Login</button>
+  </div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
