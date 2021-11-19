@@ -6,7 +6,21 @@
 </head>
 
 <body>
-
+  <!-- Modal Content -->
+  <form class="modal-content animate"  method="post" action="login.php">
+    <div class="container" style="margin-bottom: 5%; margin-top: 5%;">
+      <p style="color: Black; margin-left: 15%;">Username</p>
+      <label for="uname"><b>Username</b></label>
+      <input type="text"  name="uname" required>
+    </div>
+    <div class="container">
+      <p style="color: Black; margin-left: 15%;">Password</p>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" name="psw" required>
+      <button type="submit">Login</button>
+    </div>
+  </div>
+  
   <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
   <button class="tablink" onclick="openPage('History', this, 'blue')">History</button>
   <button class="tablink" onclick="openPage('Admin', this, 'orange')">Admin</button>
@@ -22,21 +36,6 @@
       <span onclick="document.getElementById('id01').style.display='none'"
       class="close" title="Close Modal">&times;</span>
     </div>
-  <!-- Modal Content -->
-  <form class="modal-content animate"  method="post" action="login.php">
-    <div class="container" style="margin-bottom: 5%; margin-top: 5%;">
-      <p style="color: Black; margin-left: 15%;">Username</p>
-      <label for="uname"><b>Username</b></label>
-      <input type="text"  name="uname" required>
-    </div>
-    <div class="container">
-      <p style="color: Black; margin-left: 15%;">Password</p>
-      <label for="psw"><b>Password</b></label>
-      <input type="password" name="psw" required>
-      <button type="submit">Login</button>
-    </div>
-  </div>
-
 
   <div id="History" class="tabcontent">
     <h3>History</h3>
