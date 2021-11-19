@@ -1,6 +1,8 @@
-<?php
+<html>
+<body>
 
-  $user = 5//mysqli_real_escape_string($_POST['uname']);
-  $pass = 5//mysqli_real_escape_string($_POST['psw']);
+  Welcome <?php echo $_POST["uname"]; ?><br>
+  Your email address is: <?php echo $_POST["psw"]; ?>
 
-  echo $pass;
+  </body>
+  </html>
