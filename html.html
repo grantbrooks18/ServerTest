@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,6 +6,27 @@
 </head>
 
 <body>
+
+
+  <?php
+// define variables and set to empty values
+$uname = $psw = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $uname = test_input($_POST["uname"]);
+  $psw = test_input($_POST["epsw"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+echo $uname;
+echo $psw;
+?>
 
   <button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
   <button class="tablink" onclick="openPage('History', this, 'blue')">History</button>
@@ -24,7 +44,7 @@
       class="close" title="Close Modal">&times;</span>
     </div>
   <!-- Modal Content -->
-  <form class="modal-content animate" action="/login.php" method="post">
+  <form class="modal-content animate"  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <div class="container" style="margin-bottom: 5%; margin-top: 5%;">
       <p style="color: Black; margin-left: 15%;">Username</p>
       <label for="uname"><b>Username</b></label>
