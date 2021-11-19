@@ -1,19 +1,17 @@
+
+<html>
 <?php
 // define variables and set to empty values
+$username = "grant";
+$password = "fergus1732";
+$database = "Security";
+$mysqli = new mysqli("10.0.0.132", $username, $password, $database);
 $uname = $psw = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-$uname = test_input($_POST["uname"]);
-$psw = test_input($_POST["epsw"]);
-}
-
-function test_input($data) {
-$data = trim($data);
-$data = stripslashes($data);
-$data = htmlspecialchars($data);
-return $data;
-}
+$uname = $_POST["uname"];
+$psw =  $_POST["epsw"];
 
 echo $uname;
 echo $psw;
 ?>
+<html>
