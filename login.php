@@ -1,17 +1,17 @@
-
-<html>
 <?php
-// define variables and set to empty values
-$username = "grant";
-$password = "fergus1732";
-$database = "Security";
-$mysqli = new mysqli("10.0.0.132", $username, $password, $database);
-$uname = $psw = "";
+  $link = mysqli_connect(10.0.0.132, "root", "", "demo");
 
-$uname = $_POST["uname"];
-$psw =  $_POST["epsw"];
+  // Check connection
+  if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+  }
 
-echo $uname;
-echo $psw;
+  $sql = "INSERT INTO Security (username, lpassword VALUES ('Peter', 'Parker'))";
+
+  if(mysqli_query($link, $sql)){
+      echo "Records inserted successfully.";
+  } else{
+      echo "ERROR: Could not able to execute $sql.".mysqli_error($link);
+  }
+  mysqli_close($link);
 ?>
-<html>
